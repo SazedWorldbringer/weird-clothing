@@ -38,6 +38,7 @@ class Directory extends React.Component {
           imageUrl:
             "https://images.unsplash.com/photo-1581404917879-53e19259fdda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80",
           credit: "Adam Winger",
+          size: "large",
           id: 4,
         },
         {
@@ -45,17 +46,17 @@ class Directory extends React.Component {
           imageUrl:
             "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
           credit: "Brooke Cagle",
+          size: "large",
           id: 5,
         },
-        ,
       ],
     };
   }
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, id, imageUrl }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} />
+        {this.state.sections.map(({ title, id, imageUrl, size }) => (
+          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
         ))}
       </div>
     );
